@@ -3,132 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Dzaki B.M.R</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 35px;
-            max-width: 850px;
-            width: 100%;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .profile-img {
-            width: 90px;
-            height: 90px;
-            background: #38bdf8;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 45px;
-            border: 3px solid rgba(56, 189, 248, 0.3);
-        }
-        h1 { font-size: 1.8rem; color: #38bdf8; }
-        .sub { color: #94a3b8; font-size: 0.95rem; }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        h3 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 12px; border-left: 4px solid #38bdf8; padding-left: 10px; }
-        .item { background: rgba(255, 255, 255, 0.03); padding: 15px; border-radius: 15px; margin-bottom: 15px; }
-        
-        .tag {
-            background: rgba(56, 189, 248, 0.1);
-            color: #38bdf8;
-            padding: 4px 12px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            margin: 4px 2px;
-            display: inline-block;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-        .btn-contact {
-            display: block;
-            background: #38bdf8;
-            color: #0f172a;
-            padding: 15px;
-            border-radius: 12px;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-        .btn-contact:hover { background: #7dd3fc; transform: scale(1.02); }
-
-        @media (max-width: 650px) { .grid { grid-template-columns: 1fr; } .header { flex-direction: column; text-align: center; } }
-    </style>
+    <title>Dzaki Buhairil Maarif Ramadhan | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="glass-card">
-        <div class="header">
-            <div class="profile-img">👨‍💻</div>
-            <div>
-                <h1>Dzaki B.M.R</h1>
-                <p class="sub">SIJA Student @ SMKN 1 CIBINONG (2025 - 2029)</p>
+    <div class="bento-grid">
+        <div class="card hero">
+            <span class="icon">🚀</span>
+            <p class="accent-text">SIJA Student</p>
+            <h1>Dzaki B.M.R</h1>
+            <p>Siswa SMKN 1 Cibinong yang antusias dengan Networking & IT Infrastructure. Suka ngulik server dan jaringan.</p>
+        </div>
+
+        <div class="card photo">👨‍💻</div>
+
+        <div class="card skills">
+            <h2>Skills</h2>
+            <div class="tag-container">
+                <span class="tag">Mikrotik</span>
+                <span class="tag">Cisco</span>
+                <span class="tag">Linux</span>
+                <span class="tag">PHP</span>
+                <span class="tag">JS</span>
             </div>
         </div>
 
-        <div class="grid">
-            <div>
-                <h3>Technical Skills</h3>
-                <div class="item">
-                    <div class="tag">Mikrotik</div>
-                    <div class="tag">Cisco</div>
-                    <div class="tag">Linux Administration</div>
-                    <div class="tag">Oracle VirtualBox</div>
-                </div>
+        <div class="card edu">
+            <h2>Education</h2>
+            <p class="white-text">SMKN 1 Cibinong</p>
+            <p>Sistem Informatika, Jaringan, dan Aplikasi</p>
+            <p class="small-text">2025 — 2029</p>
+        </div>
 
-                <h3>Languages</h3>
-                <div class="item">
-                    <div class="tag">HTML</div>
-                    <div class="tag">CSS</div>
-                    <div class="tag">PHP</div>
-                    <div class="tag">JavaScript</div>
-                </div>
-            </div>
+        <div class="card org">
+            <h2>Organization</h2>
+            <p class="white-text">Ketua OSIS</p>
+            <p>Masa Jabatan SMP. Fokus pada manajemen tim dan kepemimpinan.</p>
+        </div>
 
-            <div>
-                <h3>Experience</h3>
-                <div class="item">
-                    <p style="font-weight: 600;">Ketua OSIS (SMP)</p>
-                    <p style="font-size: 0.85rem; color: #94a3b8;">Melatih kepemimpinan, manajemen tim, dan komunikasi organisasi.</p>
-                </div>
-
-                <h3>Tools & Workflow</h3>
-                <div class="item">
-                    <div class="tag">VS Code</div>
-                    <div class="tag">Virtualization</div>
-                    <div class="tag">Network Simulation</div>
-                </div>
+        <div class="card tools">
+            <h2>Tools</h2>
+            <div class="tag-container">
+                <span class="tag">VS Code</span>
+                <span class="tag">VirtualBox</span>
+                <span class="tag">Git</span>
             </div>
         </div>
 
-        <a href="mailto:email-lo@gmail.com" class="btn-contact">Mari Berkolaborasi!</a>
+        <a href="mailto:email-lo@gmail.com" class="card cta">
+            KIRIM EMAIL SEKARANG
+        </a>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
