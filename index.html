@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dzaki B.M.R | SIJA</title>
+    <title>Portfolio | Dzaki B.M.R</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        
         body {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
@@ -17,128 +16,118 @@
             justify-content: center;
             padding: 20px;
         }
-
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 800px;
+            border-radius: 24px;
+            padding: 35px;
+            max-width: 850px;
             width: 100%;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
         }
-
-        .profile-header {
+        .header {
             display: flex;
             align-items: center;
             gap: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
-
         .profile-img {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             background: #38bdf8;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
+            font-size: 45px;
+            border: 3px solid rgba(56, 189, 248, 0.3);
         }
-
-        h1 { font-weight: 600; color: #38bdf8; }
-        h2 { font-size: 1.1rem; color: #94a3b8; }
-
-        .section-title {
-            font-size: 1.2rem;
-            color: #38bdf8;
-            margin-top: 10px;
+        h1 { font-size: 1.8rem; color: #38bdf8; }
+        .sub { color: #94a3b8; font-size: 0.95rem; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-pill {
+        h3 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 12px; border-left: 4px solid #38bdf8; padding-left: 10px; }
+        .item { background: rgba(255, 255, 255, 0.03); padding: 15px; border-radius: 15px; margin-bottom: 15px; }
+        
+        .tag {
             background: rgba(56, 189, 248, 0.1);
             color: #38bdf8;
-            padding: 5px 15px;
+            padding: 4px 12px;
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            margin: 4px 2px;
+            display: inline-block;
             border: 1px solid rgba(56, 189, 248, 0.2);
         }
-
-        .edu-item {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 15px;
-            border-radius: 12px;
-            margin-top: 10px;
-        }
-
         .btn-contact {
+            display: block;
             background: #38bdf8;
             color: #0f172a;
-            padding: 12px;
-            border-radius: 10px;
+            padding: 15px;
+            border-radius: 12px;
             text-align: center;
             text-decoration: none;
             font-weight: 600;
             margin-top: 20px;
             transition: 0.3s;
         }
-
         .btn-contact:hover { background: #7dd3fc; transform: scale(1.02); }
 
-        @media (max-width: 600px) {
-            .profile-header { flex-direction: column; text-align: center; }
-        }
+        @media (max-width: 650px) { .grid { grid-template-columns: 1fr; } .header { flex-direction: column; text-align: center; } }
     </style>
 </head>
 <body>
 
     <div class="glass-card">
-        <div class="profile-header">
+        <div class="header">
             <div class="profile-img">👨‍💻</div>
             <div>
                 <h1>Dzaki B.M.R</h1>
-                <h2>Siswa SIJA | SMK [Nama Sekolah Lo]</h2>
+                <p class="sub">SIJA Student @ SMKN 1 CIBINONG (2025 - 2029)</p>
             </div>
         </div>
 
-        <div>
-            <p class="section-title">Tentang Saya</p>
-            <p style="color: #cbd5e1; font-size: 0.95rem;">
-                Saya adalah siswa jurusan Sistem Informatika, Jaringan, dan Aplikasi yang antusias dengan teknologi infrastruktur IT dan pengembangan perangkat lunak.
-            </p>
-        </div>
+        <div class="grid">
+            <div>
+                <h3>Technical Skills</h3>
+                <div class="item">
+                    <div class="tag">Mikrotik</div>
+                    <div class="tag">Cisco</div>
+                    <div class="tag">Linux Administration</div>
+                    <div class="tag">Oracle VirtualBox</div>
+                </div>
 
-        <div>
-            <p class="section-title">Keahlian Utama</p>
-            <div class="skills-container">
-                <span class="skill-pill">Linux Admin</span>
-                <span class="skill-pill">Cisco Networking</span>
-                <span class="skill-pill">Mikrotik</span>
-                <span class="skill-pill">Virtualization</span>
-                <span class="skill-pill">Cloud Server</span>
+                <h3>Languages</h3>
+                <div class="item">
+                    <div class="tag">HTML</div>
+                    <div class="tag">CSS</div>
+                    <div class="tag">PHP</div>
+                    <div class="tag">JavaScript</div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Experience</h3>
+                <div class="item">
+                    <p style="font-weight: 600;">Ketua OSIS (SMP)</p>
+                    <p style="font-size: 0.85rem; color: #94a3b8;">Melatih kepemimpinan, manajemen tim, dan komunikasi organisasi.</p>
+                </div>
+
+                <h3>Tools & Workflow</h3>
+                <div class="item">
+                    <div class="tag">VS Code</div>
+                    <div class="tag">Virtualization</div>
+                    <div class="tag">Network Simulation</div>
+                </div>
             </div>
         </div>
 
-        <div>
-            <p class="section-title">Pendidikan</p>
-            <div class="edu-item">
-                <p style="font-weight: 600;">SMK [Masukan Nama Sekolah]</p>
-                <p style="font-size: 0.85rem; color: #94a3b8;">SIJA • 202X - Sekarang</p>
-            </div>
-        </div>
-
-        <a href="mailto:email-lo@gmail.com" class="btn-contact">Hubungi Via Email</a>
+        <a href="mailto:email-lo@gmail.com" class="btn-contact">Mari Berkolaborasi!</a>
     </div>
 
 </body>
