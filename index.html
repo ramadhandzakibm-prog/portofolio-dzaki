@@ -4,75 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dzaki B.M.R | SIJA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, sans-serif; }
-        body { background-color: #000; color: #fff; padding: 20px; }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: minmax(150px, auto);
-            gap: 15px;
-            max-width: 1000px;
-            margin: 0 auto;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
-        .card {
-            background: #111;
-            border: 1px solid #222;
-            border-radius: 24px;
-            padding: 24px;
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            background: #38bdf8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        h1 { font-weight: 600; color: #38bdf8; }
+        h2 { font-size: 1.1rem; color: #94a3b8; }
+
+        .section-title {
+            font-size: 1.2rem;
+            color: #38bdf8;
+            margin-top: 10px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-pill {
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .edu-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .btn-contact {
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
             transition: 0.3s;
         }
-        .card:hover { border-color: #58a6ff; transform: translateY(-5px); }
-        
-        /* Layouting Bento */
-        .header { grid-column: span 3; background: linear-gradient(45deg, #111, #1a1a1a); }
-        .photo { grid-column: span 1; background: #222; display: flex; align-items: center; justify-content: center; font-size: 50px; }
-        .skills { grid-column: span 2; }
-        .education { grid-column: span 2; }
-        .contact { grid-column: span 4; text-align: center; background: #58a6ff; color: #000; }
 
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        h2 { color: #58a6ff; margin-bottom: 15px; font-size: 1.2rem; }
-        .tag { background: #222; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; margin: 3px; display: inline-block; }
-        p { color: #888; line-height: 1.5; }
-        a { text-decoration: none; color: inherit; font-weight: bold; }
+        .btn-contact:hover { background: #7dd3fc; transform: scale(1.02); }
 
-        @media (max-width: 768px) {
-            .grid-container { grid-template-columns: repeat(1, 1fr); }
-            .header, .photo, .skills, .education, .contact { grid-column: span 1; }
+        @media (max-width: 600px) {
+            .profile-header { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <div class="grid-container">
-        <div class="card header">
-            <h1>Dzaki B.M.R</h1>
-            <p>Siswa SIJA (Sistem Informatika, Jaringan, dan Aplikasi)</p>
-            <p style="margin-top: 10px; color: #fff;">Sedang mendalami dunia Cloud Computing & Network Engineering.</p>
+    <div class="glass-card">
+        <div class="profile-header">
+            <div class="profile-img">👨‍💻</div>
+            <div>
+                <h1>Dzaki B.M.R</h1>
+                <h2>Siswa SIJA | SMK [Nama Sekolah Lo]</h2>
+            </div>
         </div>
 
-        <div class="card photo">👨‍💻</div>
-
-        <div class="card skills">
-            <h2>Keahlian</h2>
-            <div class="tag">Linux Admin</div>
-            <div class="tag">Mikrotik</div>
-            <div class="tag">Cisco</div>
-            <div class="tag">Server Config</div>
-            <div class="tag">Basic Python</div>
+        <div>
+            <p class="section-title">Tentang Saya</p>
+            <p style="color: #cbd5e1; font-size: 0.95rem;">
+                Saya adalah siswa jurusan Sistem Informatika, Jaringan, dan Aplikasi yang antusias dengan teknologi infrastruktur IT dan pengembangan perangkat lunak.
+            </p>
         </div>
 
-        <div class="card education">
-            <h2>Pendidikan</h2>
-            <p style="color: #fff;">SMK [Nama Sekolah Lo]</p>
-            <p>Sistem Informatika, Jaringan, dan Aplikasi</p>
-            <p>202X - Sekarang</p>
+        <div>
+            <p class="section-title">Keahlian Utama</p>
+            <div class="skills-container">
+                <span class="skill-pill">Linux Admin</span>
+                <span class="skill-pill">Cisco Networking</span>
+                <span class="skill-pill">Mikrotik</span>
+                <span class="skill-pill">Virtualization</span>
+                <span class="skill-pill">Cloud Server</span>
+            </div>
         </div>
 
-        <a href="mailto:email-lo@gmail.com" class="card contact">
-             Hubungi Saya Via Email 📧
-        </a>
+        <div>
+            <p class="section-title">Pendidikan</p>
+            <div class="edu-item">
+                <p style="font-weight: 600;">SMK [Masukan Nama Sekolah]</p>
+                <p style="font-size: 0.85rem; color: #94a3b8;">SIJA • 202X - Sekarang</p>
+            </div>
+        </div>
+
+        <a href="mailto:email-lo@gmail.com" class="btn-contact">Hubungi Via Email</a>
     </div>
 
 </body>
